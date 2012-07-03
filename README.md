@@ -6,6 +6,7 @@ Never have an anchor jumping your content, slide it.
 
 
 *requirements*
+==================
 
 * jQuery
 
@@ -13,32 +14,34 @@ Never have an anchor jumping your content, slide it.
 
 *Install*
 
-<script src="jquery-1.7.1.min.js"></script>
-<script src="jquery.anchor.js"></script>
+> <script src="jquery-1.7.1.min.js"></script>
+> <script src="jquery.anchor.js"></script>
 
 
 
 *How to use*
 =================
 
-*JavaScript*
+## *JavaScript*
 
 $(document).ready(function() {
 	$("a.anchorLink").anchorAnimate()
 });
 
-*HTML*
+## *HTML*
 
-<a class="anchorLink" href="#content" name="content">
+> <a class="anchorLink" href="#content" name="content">
 
 
 
 *How to contibute*
+======================
 
 Fork-me!
 
 
 
 *Credits*
+=============
 
 * Cedric Dugas - Http://www.position-absolute.com
