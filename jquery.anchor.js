@@ -13,17 +13,13 @@
 	You can use and modify this script for any project you want, but please leave this comment as credit.
 	
 *****/
-		
 
-
-$(document).ready(function() {
-	$("a.anchorLink").anchorAnimate()
-});
 
 jQuery.fn.anchorAnimate = function(settings) {
 
  	settings = jQuery.extend({
-		speed : 1100
+		speed : 1100,
+		offset: 0
 	}, settings);	
 	
 	return this.each(function(){
@@ -33,8 +29,7 @@ jQuery.fn.anchorAnimate = function(settings) {
 			event.returnValue = false;
 			var locationHref = window.location.href;
 			var elementClick = $(caller).attr("href");
-			var menuHeight = ($(window).width() > 740) ? 100 : 0;
-			var destination = $(elementClick).offset().top - menuHeight;
+			var destination = $(elementClick).offset().top - settings.offset;
 			$("html:not(:animated),body:not(:animated)").animate({ scrollTop: destination}, settings.speed, function() {
 				scrollPosition = $(window).scrollTop(); // Firefox hack
 				window.location.hash = elementClick;
